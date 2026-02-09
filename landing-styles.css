@@ -1,0 +1,253 @@
+/* Portfolio Landing Page Styles */
+
+/* Portfolio Link */
+.portfolio-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove any visible underlines or bottom borders for headings/links */
+h1, h2, h3, p, a, .landing-title, .landing-subtitle, .gallery-item h3 {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Gallery images */
+.gallery-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Portfolio Landing Page */
+.portfolio-landing {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: var(--bg-main);
+}
+
+.portfolio-landing-header {
+  padding: 4rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.back-button {
+  display: inline-block;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+}
+
+.landing-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 100;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.landing-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+  width: 100%;
+}
+
+/* Gallery Section */
+.gallery-section {
+  margin-bottom: 5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  background: var(--bg-matte);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gallery-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+}
+
+.gallery-image {
+  font-size: 3rem;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+.gallery-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.gallery-item p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Details Section */
+.details-section {
+  padding: 3rem;
+  background: var(--bg-matte);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.details-content {
+  max-width: 800px;
+}
+
+.details-content .section-title {
+  margin-bottom: 2rem;
+}
+
+.details-content > p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--gold);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.subsection-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 2rem 0 1rem 0;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem 0;
+}
+
+.service-list li {
+  padding: 0.8rem 0 0.8rem 1.5rem;
+  color: var(--text-secondary);
+  position: relative;
+  font-weight: 300;
+}
+
+.service-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.cta-section {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .portfolio-landing-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .landing-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .landing-container {
+    padding: 0 1.5rem 3rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .details-section {
+    padding: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}

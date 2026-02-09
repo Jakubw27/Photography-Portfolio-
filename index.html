@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="portfolio-logo">Portfolio</a>
+            <div class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <!-- Animated SVG menu logo -->
+                <svg id="menuLogo" class="menu-logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect class="outer" x="6" y="6" width="52" height="52" rx="8" ry="8" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+                    <circle class="inner" cx="32" cy="32" r="8" fill="rgba(255,255,255,0.04)" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Jays.Crystal.Eye Photography</h1>
+            <p class="hero-subtitle">WHERE IDEAS COME TO LIFE</p>
+            <!-- hero CTAs removed — replaced by animated menu -->
+            <!-- Timezone Display -->
+            <div class="hero-timezone">
+                <div class="tz-item">
+                    <span class="tz-label">London</span>
+                    <span class="tz-time" id="london-time">--:--:--</span>
+                </div>
+                <div class="tz-item">
+                    <span class="tz-label">Warsaw</span>
+                    <span class="tz-time" id="warsaw-time">--:--:--</span>
+                </div>
+                <!--<div class="tz-item">
+                    <span class="tz-label">Paris</span>
+                    <span class="tz-time" id="paris-time">--:--:--</span>
+                </div> -->
+                <div class="tz-item">
+                    <span class="tz-label">New York</span>
+                    <span class="tz-time" id="newyork-time">--:--:--</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-container">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="portfolio-subtitle">Explore our most recent photography work and achievements</p>
+            
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be generated dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi! Based between London and Poland, I photograph people, places, and moments with a cinematic eye and an instinct for storytelling. Inspired by movement, contrast, and culture, my work explores the space between chaos and calm—where the most authentic images live.</p>
+                    <p>My journey in web development has been exciting, working on various projects that range from simple websites to complex web applications.</p>
+                </div>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">Have a project in mind? Let's work together! Book your photography session or send us a message.</p>
+            
+            <!-- Location Section -->
+            <div class="location-section">
+                <div class="location-content">
+                    <h3 class="location-title">Our Location</h3>
+                    <p class="location-text">Visit us or schedule your session</p>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6676624982093!2d-0.12782312346969!3d51.50735007120291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605240c23cab5%3A0xf9406e53b5f10c2!2sLondon!5e0!3m2!1sen!2suk!4v1707491234567&style=feature:all|element:labels|visibility:off&style=feature:water|color:0x1a1a1a&style=feature:land|color:0x000000&style=feature:road|visibility:off&style=feature:administrative.country|color:0x333333" 
+                            class="location-map"
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                    
+                    <!-- Timezone Display -->
+                    <div class="timezone-section">
+                        <div class="timezone-item">
+                            <span class="timezone-label">London</span>
+                            <span class="timezone-time" id="london-time">--:--:--</span>
+                        </div>
+                        <div class="timezone-divider"></div>
+                        <div class="timezone-item">
+                            <span class="timezone-label">Warsaw</span>
+                            <span class="timezone-time" id="warsaw-time">--:--:--</span>
+                        </div>
+                        <div class="timezone-divider"></div>
+                        <div class="timezone-item">
+                            <span class="timezone-label">New York</span>
+                            <span class="timezone-time" id="newyork-time">--:--:--</span>
+                        </div>
+                    </div>
+            <div class="location-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Address</span>
+                            <span class="detail-value">London, UK</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Email</span>
+                            <span class="detail-value">hello@yourportfolio.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Phone</span>
+                            <span class="detail-value">+44 (0) 20 1234 5678</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Calendar -->
+            <div class="booking-section">
+                <h3 class="booking-title">Book Your Photography Session</h3>
+                <p class="booking-subtitle">Select your preferred date and time</p>
+                <div class="calendly-embed-wrapper">
+                    <iframe src="https://calendly.com/user" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="form-section">
+                <h3 class="form-title">Send us a Message</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="name" 
+                            placeholder="Your Name" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="Your Email" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <select id="service" class="form-input" required>
+                            <option value="" disabled selected>Select Service</option>
+                            <option value="portrait">Portrait Session</option>
+                            <option value="wedding">Wedding Photography</option>
+                            <option value="event">Event Photography</option>
+                            <option value="product">Product Photography</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea 
+                            id="message" 
+                            placeholder="Tell us about your project" 
+                            rows="5" 
+                            required
+                            class="form-input"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-section-container">
+            <h2 class="section-title">Find Us</h2>
+            <p class="map-subtitle">Located in the heart of London</p>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6676624982093!2d-0.12782312346969!3d51.50735007120291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605240c23cab5%3A0xf9406e53b5f10c2!2sLondon!5e0!3m2!1sen!2suk!4v1707491234567" 
+                    class="location-map-full"
+                    frameborder="0" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+
+        <!-- Book Consultation Popup -->
+        <div id="consultationPopup" class="consultation-popup" aria-hidden="true">
+            <button id="consultClose" class="consult-close" aria-label="Close">✕</button>
+            <div class="consult-content">
+                <h4>Book a Free Consultation</h4>
+                <p>Discuss your project and availability — no obligation.</p>
+                <a href="index.html#contact" id="consultBookNow" class="cta-button">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Subtle scroll hint on Home (right side) -->
+        <div class="scroll-hint" aria-hidden="true">Scroll</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
