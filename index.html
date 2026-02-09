@@ -12,13 +12,18 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="portfolio-logo">Portfolio</a>
-            <div class="menu-toggle" id="menuToggle" aria-label="Open menu">
-                <!-- Animated SVG menu logo -->
-                <svg id="menuLogo" class="menu-logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect class="outer" x="6" y="6" width="52" height="52" rx="8" ry="8" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
-                    <circle class="inner" cx="32" cy="32" r="8" fill="rgba(255,255,255,0.04)" />
-                </svg>
+            <a href="index.html" class="portfolio-logo">
+                <img src="Portfolio logo.png" alt="Logo" class="logo-image">
+            </a>
+
+            <div class="nav-actions">
+                <a href="#contact" class="header-nav-button">Contact</a>
+
+                <button class="hamburger" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -27,7 +32,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Jays.Crystal.Eye Photography</h1>
-            <p class="hero-subtitle">WHERE IDEAS COME TO LIFE</p>
+            <p class="hero-subtitle">WHERE IDEAS SPRING TO LIFE</p>
             <!-- hero CTAs removed — replaced by animated menu -->
             <!-- Timezone Display -->
             <div class="hero-timezone">
@@ -91,6 +96,17 @@
     </section>
 
     <!-- Contact Section -->
+    <!-- Assist Section: How can we assist you today? -->
+    <section id="assist" class="assist-section">
+        <div class="assist-container">
+            <div class="assist-content">
+                <h2 class="section-title assist-title">How can we assist you today?</h2>
+                <p class="assist-subtitle">Let's start with your industry</p>
+            </div>
+            <a href="consultation.html" class="assist-cta">Book free consultation</a>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="contact-container">
             <h2 class="section-title">Get In Touch</h2>
@@ -199,6 +215,73 @@
                     <button type="submit" class="submit-button">Send Message</button>
                     <div id="formMessage" class="form-message"></div>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="faq-container">
+            <div class="faq-left">
+                <h2 class="faq-title">FAQ</h2>
+            </div>
+            <div class="faq-right">
+                <div class="faq-header">
+                    <h2 class="faq-heading">Frequently Asked Questions</h2>
+                    <p class="faq-subtitle">Straight answers to real questions — from timelines and pricing to platforms and post-launch support. We make it easy to move forward with clarity.</p>
+                </div>
+                
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long is the process of post processing images after a photoshoot</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Images usually take 4 to 8 working days depending on photoshoot that will be animated underneath question</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What equipment do you use for photography</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We use professional-grade cameras and lenses to ensure the highest quality of images. Our equipment is regularly updated to include the latest technology in the photography industry.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you offer rush delivery on edited photos</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we do offer expedited editing services. Rush deliveries are available for an additional fee and typically reduce turnaround time by 50%. Please contact us for specific pricing.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is your cancellation policy</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Cancellations made 14 days or more before your scheduled shoot receive a full refund. Cancellations within 14 days are subject to a 50% fee. Cancellations within 48 hours are non-refundable.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I request specific photo editing styles</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! We offer a variety of editing styles to match your vision. During our consultation, we'll discuss your preferences and show you examples of our work to ensure we deliver exactly what you need.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

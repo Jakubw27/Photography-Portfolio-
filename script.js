@@ -10,6 +10,22 @@ const portfolioProjects = [
   },
   {
     id: 2,
+    title: "Drone & Aerial Photography",
+    description: "Cinematic aerial imagery and architectural overviews",
+    emoji: "🚁",
+    stats: ["4K Options", "Global Operations"],
+    link: "drone.html"
+  },
+  {
+    id: 3,
+    title: "Interior Photography",
+    description: "Elegant interior spaces, hospitality and architectural interiors",
+    emoji: "🏠",
+    stats: ["150+ Spaces", "Worldwide"],
+    link: "interior.html"
+  },
+  {
+    id: 4,
     title: "Nature",
     description: "Capturing the raw beauty of landscapes and wildlife",
     emoji: "🌄",
@@ -17,7 +33,7 @@ const portfolioProjects = [
     link: "nature.html"
   },
   {
-    id: 3,
+    id: 5,
     title: "Portrait Sessions",
     description: "Professional portraits that reveal authentic personalities",
     emoji: "👤",
@@ -25,7 +41,7 @@ const portfolioProjects = [
     link: "portrait.html"
   },
   {
-    id: 4,
+    id: 6,
     title: "Urban & Architectural",
     description: "Exploring the intersection of design and urban landscapes",
     emoji: "🏙️",
@@ -174,10 +190,12 @@ const menuOverlay = (() => {
   const div = document.createElement('div');
   div.className = 'menu-overlay';
   div.innerHTML = `
+    <button class="menu-close" aria-label="Close menu">✕</button>
     <ul class="overlay-items">
       <li><a href="index.html#home" class="overlay-link">HOME</a></li>
       <li><a href="index.html#portfolio" class="overlay-link">PORTFOLIO</a></li>
       <li><a href="index.html#about" class="overlay-link">ABOUT</a></li>
+      <li><a href="index.html#faq" class="overlay-link">FAQ</a></li>
       <li><a href="index.html#contact" class="overlay-link">CONTACT</a></li>
     </ul>
   `;
@@ -199,6 +217,15 @@ if (menuToggle) {
       menuOverlay.classList.remove('open');
     });
   });
+
+  // close overlay when X button is clicked
+  const closeButton = menuOverlay.querySelector('.menu-close');
+  if (closeButton) {
+    closeButton.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      menuOverlay.classList.remove('open');
+    });
+  }
 }
 
 // Consultation popup behavior
@@ -274,4 +301,30 @@ setInterval(updateTimezones, 1000);
 // Page load animation
 window.addEventListener('load', () => {
   document.body.style.opacity = '1';
+});
+// FAQ Accordion functionality
+function initFAQ() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all FAQ items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Open the clicked one if it wasn't already open
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    });
+  });
+}
+
+// Run FAQ init when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  initFAQ();
 });
